@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de Relojes - La Hora Perfecta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #333;
+            --secondary-color: #f4f4f4;
+            --highlight-color: #c00;
+            --text-color: #555;
+            --white: #fff;
+            --border-color: #ddd;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 5px solid var(--highlight-color);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+        }
+        
+        .hero {
+            background: url('https://via.placeholder.com/1200x500') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h2 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        .hero-content p {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--highlight-color);
+            color: var(--white);
+            padding: 15px 30px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #a00;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: var(--highlight-color);
+            margin: 10px auto 0;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 20px 0;
+        }
+
+        .product-card {
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-title {
+            font-size: 1.4em;
+            margin: 10px 0;
+            color: var(--primary-color);
+        }
+
+        .product-price {
+            font-size: 1.2em;
+            color: var(--highlight-color);
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .product-card .btn {
+            font-size: 0.9em;
+            padding: 10px 20px;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>La Hora Perfecta</h1>
+            <p>Relojes que marcan tu estilo</p>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h2>El tiempo es ahora.</h2>
+            <p>Descubre nuestra exclusiva colección de relojes de lujo y casuales.</p>
+            <a href="#productos" class="btn">Explora la Colección</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title" id="productos">Nuestros Productos Destacados</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x300/c0c0c0/000000?text=Reloj+Clásico" alt="Reloj Clásico de Cuero" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Reloj Clásico de Cuero</h3>
+                    <p class="product-price">$250</p>
+                    <a href="#" class="btn">Comprar Ahora</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x300/a0a0a0/ffffff?text=Reloj+Deportivo" alt="Reloj Deportivo Smart" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Reloj Deportivo Smart</h3>
+                    <p class="product-price">$180</p>
+                    <a href="#" class="btn">Comprar Ahora</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x300/e0e0e0/000000?text=Reloj+Elegante" alt="Reloj Elegante de Metal" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Reloj Elegante de Metal</h3>
+                    <p class="product-price">$320</p>
+                    <a href="#" class="btn">Comprar Ahora</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x300/909090/ffffff?text=Reloj+Digital" alt="Reloj Digital Moderno" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Reloj Digital Moderno</h3>
+                    <p class="product-price">$95</p>
+                    <a href="#" class="btn">Comprar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 La Hora Perfecta. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
